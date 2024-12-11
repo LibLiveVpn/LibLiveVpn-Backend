@@ -1,1 +1,1 @@
-# Backend часть сервиса LibLiveVpn
+# Backend С‡Р°СЃС‚СЊ СЃРµСЂРІРёСЃР° LibLiveVpn
