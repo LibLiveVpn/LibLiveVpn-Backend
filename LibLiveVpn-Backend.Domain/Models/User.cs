@@ -1,4 +1,4 @@
-﻿namespace LibLiveVpn_Backend.Domain
+﻿namespace LibLiveVpn_Backend.Domain.Models
 {
     public class User
     {
@@ -8,6 +8,6 @@
 
         public string PasswordHash { get; set; } = string.Empty;
 
-        public List<VpnConfiguration> Configurations { get; set; } = new List<VpnConfiguration>();
+        public List<VpnConfigurationSummary> Configurations { get; set; } = new List<VpnConfigurationSummary>();
     }
 }

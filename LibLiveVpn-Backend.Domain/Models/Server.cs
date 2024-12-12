@@ -1,4 +1,4 @@
-﻿namespace LibLiveVpn_Backend.Domain
+﻿namespace LibLiveVpn_Backend.Domain.Models
 {
     public class Server
     {

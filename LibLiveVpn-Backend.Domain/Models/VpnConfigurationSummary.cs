@@ -1,6 +1,6 @@
-﻿namespace LibLiveVpn_Backend.Domain
+﻿namespace LibLiveVpn_Backend.Domain.Models
 {
-    public class VpnConfiguration
+    public class VpnConfigurationSummary
     {
         public Guid Id { get; set; }
 
