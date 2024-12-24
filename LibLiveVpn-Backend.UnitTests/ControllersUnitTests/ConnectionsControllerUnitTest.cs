@@ -18,7 +18,7 @@ namespace LibLiveVpn_Backend.UnitTests.ControllersUnitTests
             // Arrange
             var userId = Guid.NewGuid();
             var mock = new Mock<IVpnConnectionService>();
-            mock.Setup(repo => repo.ConnectUserAsync(userId, CancellationToken.None)).ReturnsAsync(Guid.Empty);
+            mock.Setup(repo => repo.ConnectUserAsync(It.IsAny<Guid>(), CancellationToken.None)).ReturnsAsync(Guid.Empty);
             var controller = new ConnectionsController(mock.Object);
 
             // Act

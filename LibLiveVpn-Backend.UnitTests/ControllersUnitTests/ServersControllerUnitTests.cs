@@ -19,7 +19,7 @@ namespace LibLiveVpn_Backend.UnitTests.ControllersUnitTests
             // Arrange
             var serverId = Guid.NewGuid();
             var mock = new Mock<IServerRepository>();
-            mock.Setup(repo => repo.GetByIdAsync(serverId, CancellationToken.None)).ReturnsAsync((Server?)null);
+            mock.Setup(repo => repo.GetByIdAsync(It.IsAny<Guid>(), CancellationToken.None)).ReturnsAsync((Server?)null);
             var controller = new ServersController(mock.Object);
 
             // Act
