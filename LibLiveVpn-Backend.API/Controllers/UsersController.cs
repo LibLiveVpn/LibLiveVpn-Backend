@@ -26,6 +26,11 @@ namespace LibLiveVpn_Backend.API.Controllers
         public async Task<ActionResult> GetUser(Guid id, CancellationToken cancellationToken)
         {
             var user = await _userRepository.GetByIdAsync(id, cancellationToken);
+            if (user == null)
+            {
+                return NotFound();
+            }
+
             return Ok(user);
         }
 
@@ -35,7 +40,7 @@ namespace LibLiveVpn_Backend.API.Controllers
         /// <param name="cancellationToken">Токен отмены асинхронного метода</param>
         /// <returns>Возвращает 200 со списком всех пользователей</returns>
         [HttpGet]
-        public async Task<ActionResult> GetUsers(CancellationToken cancellationToken)
+        public async Task<ActionResult> GetAllUsers(CancellationToken cancellationToken)
         {
             var users = await _userRepository.GetAsync(cancellationToken);
             return Ok(users);
@@ -59,7 +64,7 @@ namespace LibLiveVpn_Backend.API.Controllers
 
             newUser = await _userRepository.CreateAsync(newUser, cancellationToken);
 
-            return Ok(newUser);
+            return CreatedAtAction(nameof(GetUser), newUser);
         }
 
         /// <summary>
