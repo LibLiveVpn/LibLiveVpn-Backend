@@ -21,7 +21,7 @@ namespace LibLiveVpn_Backend.API.Controllers
         /// </summary>
         /// <param name="id">Идентификатор пользователя</param>
         /// <param name="cancellationToken">Токен отмены асинхронного метода</param>
-        /// <returns></returns>
+        /// <returns>Возвращает 200 и объект пользователя в случае успеха, иначе 204</returns>
         [HttpGet("{id}")]
         public async Task<ActionResult> GetUser(Guid id, CancellationToken cancellationToken)
         {
@@ -33,7 +33,7 @@ namespace LibLiveVpn_Backend.API.Controllers
         /// Метод получения всех пользователей
         /// </summary>
         /// <param name="cancellationToken">Токен отмены асинхронного метода</param>
-        /// <returns></returns>
+        /// <returns>Возвращает 200 со списком всех пользователей</returns>
         [HttpGet]
         public async Task<ActionResult> GetUsers(CancellationToken cancellationToken)
         {
@@ -46,7 +46,7 @@ namespace LibLiveVpn_Backend.API.Controllers
         /// </summary>
         /// <param name="createUserDto">Модель с параметрами для создания пользователя</param>
         /// <param name="cancellationToken">Токен отмены асинхронного метода</param>
-        /// <returns></returns>
+        /// <returns>Возвращает объект созданного пользователя в случае успеха. В случае ошибки при создании возвращает код 204</returns>
         [HttpPost]
         public async Task<ActionResult> CreateUser(CreateUserDto createUserDto, CancellationToken cancellationToken)
         {
@@ -67,7 +67,7 @@ namespace LibLiveVpn_Backend.API.Controllers
         /// </summary>
         /// <param name="updateUserDto">Модель с параметрами для обновления пользователя</param>
         /// <param name="cancellationToken">Токен отмены асинхронного метода</param>
-        /// <returns>Возвращает объект обновленного пользователя в случае успеха. В случае отсутствия пользователя с заданным Id в системе возвращает BadRequest. В случае ошибки при обновлениии возвращает код 201</returns>
+        /// <returns>Возвращает объект обновленного пользователя в случае успеха. В случае отсутствия пользователя с заданным Id в системе возвращает BadRequest. В случае ошибки при обновлениии возвращает код 204</returns>
         [HttpPut]
         public async Task<ActionResult> UpdateUser(UpdateUserDto updateUserDto, CancellationToken cancellationToken)
         {

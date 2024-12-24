@@ -19,7 +19,7 @@ namespace LibLiveVpn_Backend.API.Controllers
         /// </summary>
         /// <param name="id">Идентификатор сервера</param>
         /// <param name="cancellationToken">Токен отмены асинхронного метода</param>
-        /// <returns>Возвращает 200 и объект сервера, иначе 201</returns>
+        /// <returns>Возвращает 200 и объект сервера в случае успеха, иначе 204</returns>
         [HttpGet("{id}")]
         public async Task<ActionResult> GetServer(Guid id, CancellationToken cancellationToken)
         {
