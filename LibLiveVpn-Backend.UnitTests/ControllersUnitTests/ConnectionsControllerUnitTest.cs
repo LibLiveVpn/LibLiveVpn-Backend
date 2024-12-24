@@ -44,8 +44,8 @@ namespace LibLiveVpn_Backend.UnitTests.ControllersUnitTests
             // Assert
             Assert.IsInstanceOf<OkObjectResult>(result);
             var okResult = result as OkObjectResult;
-            Assert.IsNotNull(okResult!.Value);
-            //Assert.AreEqual(userConnectionId, okResult!.Value);
+            Assert.IsNotNull(okResult);
+            Assert.IsNotNull(okResult.Value);
             Assert.That(okResult!.Value, Is.EqualTo(userConnectionId));
         }
 
