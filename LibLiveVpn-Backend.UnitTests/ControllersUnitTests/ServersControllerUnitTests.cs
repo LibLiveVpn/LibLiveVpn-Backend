@@ -62,8 +62,8 @@ namespace LibLiveVpn_Backend.UnitTests.ControllersUnitTests
         public async Task GetServersReturnEmptyCollection()
         {
             // Arrange
-            var mock = new Mock<IServerRepository>();
             var emptyServerList = new List<Server>();
+            var mock = new Mock<IServerRepository>();
             mock.Setup(repo => repo.GetAsync(CancellationToken.None)).ReturnsAsync(emptyServerList);
             var controller = new ServersController(mock.Object);
 
@@ -86,7 +86,6 @@ namespace LibLiveVpn_Backend.UnitTests.ControllersUnitTests
         public async Task GetServersReturn4AmountCollection()
         {
             // Arrange
-            var mock = new Mock<IServerRepository>();
             var serverList = new List<Server>()
             {
                 new Server { Id = Guid.NewGuid(), Ip = "127.0.0.1", Port = 1011, Provider = "Test", Name = "Test", Description = "Test" },
@@ -94,6 +93,7 @@ namespace LibLiveVpn_Backend.UnitTests.ControllersUnitTests
                 new Server { Id = Guid.NewGuid(), Ip = "127.0.0.3", Port = 1013, Provider = "Test", Name = "Test", Description = "Test" },
                 new Server { Id = Guid.NewGuid(), Ip = "127.0.0.4", Port = 1014, Provider = "Test", Name = "Test", Description = "Test" },
             };
+            var mock = new Mock<IServerRepository>();
             mock.Setup(repo => repo.GetAsync(CancellationToken.None)).ReturnsAsync(serverList);
             var controller = new ServersController(mock.Object);
 
