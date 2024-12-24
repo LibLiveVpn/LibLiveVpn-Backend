@@ -63,6 +63,10 @@ namespace LibLiveVpn_Backend.API.Controllers
             };
 
             newUser = await _userRepository.CreateAsync(newUser, cancellationToken);
+            if (newUser == null)
+            {
+                return BadRequest();
+            }
 
             return CreatedAtAction(nameof(GetUser), newUser);
         }
