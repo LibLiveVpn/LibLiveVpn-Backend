@@ -24,6 +24,11 @@ namespace LibLiveVpn_Backend.API.Controllers
         public async Task<ActionResult> GetServer(Guid id, CancellationToken cancellationToken)
         {
             var server = await _serverRepository.GetByIdAsync(id, cancellationToken);
+            if (server == null)
+            {
+                return NotFound();
+            }
+
             return Ok(server);
         }
 
