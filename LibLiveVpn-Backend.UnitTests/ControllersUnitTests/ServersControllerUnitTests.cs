@@ -51,6 +51,7 @@ namespace LibLiveVpn_Backend.UnitTests.ControllersUnitTests
 
             // Assert
             Assert.IsInstanceOf<OkObjectResult>(result);
+
             var okResult = result as OkObjectResult;
             Assert.IsNotNull(okResult);
             Assert.IsNotNull(okResult.Value);
@@ -71,6 +72,7 @@ namespace LibLiveVpn_Backend.UnitTests.ControllersUnitTests
 
             // Assert
             Assert.IsInstanceOf<OkObjectResult>(result);
+
             var okResult = result as OkObjectResult;
             Assert.IsNotNull(okResult);
             Assert.IsInstanceOf<List<Server>>(okResult.Value);
