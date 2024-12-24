@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35527.113 d17.12
+VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibLiveVpn-Backend.Domain", "LibLiveVpn-Backend.Domain\LibLiveVpn-Backend.Domain.csproj", "{656CF303-B118-4D99-BD21-1025DDD88378}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibLiveVpn-Backend.UnitTests", "LibLiveVpn-Backend.UnitTests\LibLiveVpn-Backend.UnitTests.csproj", "{0DA10688-0F45-4BD2-BD94-C24DBB867AAB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibLiveVpn-Backend.Application", "LibLiveVpn-Backend.Application\LibLiveVpn-Backend.Application.csproj", "{FA40A3F6-01D0-4232-99EE-189E01CD3DBD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibLiveVpn-Backend.API.Tests", "LibLiveVpn-Backend.API.Tests\LibLiveVpn-Backend.API.Tests.csproj", "{C74CCB32-A374-44F3-AA13-5EEAFF54DC4C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
