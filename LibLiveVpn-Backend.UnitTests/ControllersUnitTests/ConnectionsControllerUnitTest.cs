@@ -13,7 +13,7 @@ namespace LibLiveVpn_Backend.UnitTests.ControllersUnitTests
         }
 
         [Test]
-        public async Task CannotConnectUserResultOkNoContent()
+        public async Task CannotConnectUserReturnOkNoContent()
         {
             // Arrange
             var userId = Guid.NewGuid();
@@ -29,7 +29,7 @@ namespace LibLiveVpn_Backend.UnitTests.ControllersUnitTests
         }
 
         [Test]
-        public async Task ConnectUserResultOkWithConnectionId()
+        public async Task ConnectUserReturnOkWithConnectionId()
         {
             // Arrange
             var userId = Guid.NewGuid();
