@@ -10,7 +10,7 @@ namespace LibLiveVpn_Backend.Application.Interfaces.Repositories
         /// <param name="serverId">Идентификатор сервера в системе</param>
         /// <param name="cancellationToken">Токен отмены асинхронной функции</param>
         /// <returns>При успешном поиске возвращает объект сервера, иначе Null</returns>
-        Task<Server?> GetServerByIdAsync(Guid serverId, CancellationToken cancellationToken);
+        Task<Server?> GetByIdAsync(Guid serverId, CancellationToken cancellationToken);
 
         /// <summary>
         /// Функция получения всех серверов системы
