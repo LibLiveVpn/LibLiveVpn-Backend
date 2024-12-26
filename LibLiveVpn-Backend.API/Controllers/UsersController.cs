@@ -100,9 +100,9 @@ namespace LibLiveVpn_Backend.API.Controllers
         /// <param name="id">Идентификатор пользователя</param>
         /// <returns>В случае успешного удаления возвращает код 201, иначе BadRequest </returns>
         [HttpDelete]
-        public ActionResult DeleteUser(Guid id)
+        public async Task<ActionResult> DeleteUser(Guid id, CancellationToken cancellationToken)
         {
-            if (!_userRepository.Delete(id))
+            if (! await _userRepository.DeleteAsync(id, cancellationToken))
             {
                 return BadRequest();
             }

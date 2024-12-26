@@ -237,11 +237,11 @@ namespace LibLiveVpn_Backend.UnitTests.ControllersUnitTests
             // Arrange
             var userId = Guid.NewGuid();
             var mock = new Mock<IUserRepository>();
-            mock.Setup(repo => repo.Delete(It.IsAny<Guid>())).Returns(false);
+            mock.Setup(repo => repo.DeleteAsync(It.IsAny<Guid>(), CancellationToken.None)).ReturnsAsync(false);
             var controller = new UsersController(mock.Object);
 
             // Act
-            var result = controller.DeleteUser(userId);
+            var result = await controller.DeleteUser(userId, CancellationToken.None);
 
             // Assert
             Assert.IsInstanceOf<BadRequestResult>(result);
@@ -253,11 +253,11 @@ namespace LibLiveVpn_Backend.UnitTests.ControllersUnitTests
             // Arrange
             var userId = Guid.NewGuid();
             var mock = new Mock<IUserRepository>();
-            mock.Setup(repo => repo.Delete(It.IsAny<Guid>())).Returns(true);
+            mock.Setup(repo => repo.DeleteAsync(It.IsAny<Guid>(), CancellationToken.None)).ReturnsAsync(true);
             var controller = new UsersController(mock.Object);
 
             // Act
-            var result = controller.DeleteUser(userId);
+            var result = await controller.DeleteUser(userId, CancellationToken.None);
 
             // Assert
             Assert.IsInstanceOf<OkResult>(result);
