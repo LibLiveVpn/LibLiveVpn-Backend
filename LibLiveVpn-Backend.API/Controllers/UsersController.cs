@@ -68,7 +68,7 @@ namespace LibLiveVpn_Backend.API.Controllers
                 return BadRequest();
             }
 
-            return CreatedAtAction(nameof(GetUser), newUser);
+            return CreatedAtAction(nameof(GetUser), new { id = newUser.Id }, newUser);
         }
 
         /// <summary>
