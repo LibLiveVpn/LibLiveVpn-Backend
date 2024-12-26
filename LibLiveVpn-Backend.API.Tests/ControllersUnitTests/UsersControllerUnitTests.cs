@@ -28,7 +28,6 @@ namespace LibLiveVpn_Backend.UnitTests.ControllersUnitTests
             var result = await controller.GetUser(userId, CancellationToken.None);
 
             // Assert
-            Assert.Fail();
             Assert.IsInstanceOf<NotFoundResult>(result);
         }
 
