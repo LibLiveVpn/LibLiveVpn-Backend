@@ -5,6 +5,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <RootNamespace>LibLiveVpn_Backend.API</RootNamespace>
+    <UserSecretsId>eb9b61b0-bd5b-4530-b1b2-fbcc399ea95f</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
