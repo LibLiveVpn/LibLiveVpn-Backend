@@ -28,6 +28,14 @@ namespace LibLiveVpn_Backend.Application.Interfaces.Repositories
         Task<Server?> CreateAsync(Server server, CancellationToken cancellationToken);
 
         /// <summary>
+        /// Функция обновления сервера с заданными параметрами
+        /// </summary>
+        /// <param name="server">Класс с параметрами для обновления сервера. Обновляемые поля выбираются конкретной реализацией. В поле Id должен находится Id сущности, которую необходимо обновить</param>
+        /// <param name="cancellationToken">Токен отмены асинхронной функции</param>
+        /// <returns>При успешном обновлении возвращает обновленный объект сервера, иначе Null</returns>
+        Task<Server?> UpdateAsync(Server server, CancellationToken cancellationToken);
+
+        /// <summary>
         /// Функция удаления сервера из системы по Id
         /// </summary>
         /// <param name="serverId"></param>
