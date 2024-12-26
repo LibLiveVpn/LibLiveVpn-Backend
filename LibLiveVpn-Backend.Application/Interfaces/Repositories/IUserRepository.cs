@@ -39,7 +39,8 @@ namespace LibLiveVpn_Backend.Application.Interfaces.Repositories
         /// Функция удаления пользователя из системы по Id
         /// </summary>
         /// <param name="userId">Идентификатор пользователя в системе</param>
+        /// <param name="cancellationToken">Токен отмены асинхронной функции</param>
         /// <returns>При успешном удалении возвращает True, иначе False</returns>
-        bool Delete(Guid userId);
+        Task<bool> DeleteAsync(Guid userId, CancellationToken cancellationToken);
     }
 }
