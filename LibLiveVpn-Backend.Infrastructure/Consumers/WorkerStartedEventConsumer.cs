@@ -18,7 +18,7 @@ namespace LibLiveVpn_Backend.Infrastructure.Consumers
 
         public async Task Consume(ConsumeContext<WorkerStartedEvent> context)
         {
-            var workerEndpoint = await _bus.GetSendEndpoint(new Uri("rabbitmq://localhost/message-queue1"));
+            var workerEndpoint = await _bus.GetSendEndpoint(new Uri($"rabbitmq://localhost/worker-node-{context.Message.WorkerId}"));
 
             await workerEndpoint.Send(new CreateInterfaceCommand
             {
