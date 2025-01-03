@@ -11,6 +11,8 @@ namespace LibLiveVpn_Backend.Persistence
 
         public DbSet<ServerWorkerEntity> ServerWorkers { get; set; }
 
+        public DbSet<WorkerCommandTaskEntity> WorkerCommands { get; set; }
+
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
     }
 }
