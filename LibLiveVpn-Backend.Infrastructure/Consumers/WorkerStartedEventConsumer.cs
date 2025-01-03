@@ -1,5 +1,5 @@
-﻿using LibLiveVpn_Backend.Infrastructure.Contracts.Commands;
-using LibLiveVpn_Backend.Infrastructure.Contracts.Events;
+﻿using LibLiveVpn_Contracts.Commands;
+using LibLiveVpn_Contracts.Events;
 using MassTransit;
 using Microsoft.Extensions.Logging;
 

@@ -1,5 +1,5 @@
 ﻿using System.Text.Json;
-using LibLiveVpn_ServerWorker.Infrastructure.Contracts.Events;
+using LibLiveVpn_Contracts.Events;
 using MassTransit;
 using Microsoft.Extensions.Logging;
 
