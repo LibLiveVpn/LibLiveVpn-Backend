@@ -1,8 +1,10 @@
+using LibLiveVpn_Backend.Infrastructure;
 using LibLiveVpn_Backend.Persistence;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddInfrastructureDependencies(builder.Configuration);
 builder.Services.AddPersistenceDependencies(builder.Configuration);
 
 builder.Services.AddControllers();

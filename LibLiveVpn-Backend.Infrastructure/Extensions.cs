@@ -41,8 +41,9 @@ namespace LibLiveVpn_Backend.Infrastructure
 
                 conf.UsingRabbitMq((context, cfg) =>
                 {
-                    cfg.Host(mqBrokerConfiguration.Host, c =>
+                    cfg.Host(mqBrokerConfiguration.Host, mqBrokerConfiguration.Port, "/", c =>
                     {
+                        c.ConnectionName("backend-connection");
                         c.Username(mqBrokerConfiguration.Username);
                         c.Password(mqBrokerConfiguration.Password);
                     });

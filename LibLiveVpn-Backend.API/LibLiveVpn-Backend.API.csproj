@@ -18,6 +18,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\LibLiveVpn-Backend.Application\LibLiveVpn-Backend.Application.csproj" />
+    <ProjectReference Include="..\LibLiveVpn-Backend.Infrastructure\LibLiveVpn-Backend.Infrastructure.csproj" />
     <ProjectReference Include="..\LibLiveVpn-Backend.Persistence\LibLiveVpn-Backend.Persistence.csproj" />
   </ItemGroup>
 
