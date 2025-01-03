@@ -38,7 +38,7 @@ namespace LibLiveVpn_Backend.Application.Interfaces.Repositories
         /// <summary>
         /// Функция удаления сервера из системы по Id
         /// </summary>
-        /// <param name="serverId"></param>
+        /// <param name="serverId">Идентификатор сервера в системе</param>
         /// <param name="cancellationToken">Токен отмены асинхронной функции</param>
         /// <returns>При успешном удалении возвращает True, иначе False</returns>
         Task<bool> DeleteAsync(Guid serverId, CancellationToken cancellationToken);
