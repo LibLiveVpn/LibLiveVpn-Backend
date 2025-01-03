@@ -34,6 +34,7 @@ namespace LibLiveVpn_Backend.Persistence
 
             services.AddScoped<IServerRepository, ServerRepositoryEfCore>();
             services.AddScoped<IUserRepository, UserRepositoryEfCore>();
+            services.AddScoped<IServerWorkerRepository, ServerWorkerRepositoryEfCore>();
 
             return services;
         }
